@@ -1,13 +1,21 @@
-import { CircularProgress, Box } from '@mui/material'
+import { CircularProgress, Box, Grid } from '@mui/material'
 
 type LoadingProps = {}
 
-const Load = (props: LoadingProps) => {
+const Loading = (props: LoadingProps) => {
     return (
-        <Box sx={{ display: 'flex' }}>
-            <CircularProgress />
-        </Box>
+        <Grid
+            container
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+            sx={{
+                padding: '30px 0px',
+            }}
+        >
+            <CircularProgress color="inherit" />
+        </Grid>
     )
 }
 
-export default Load
+export default Loading
