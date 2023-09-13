@@ -2,7 +2,6 @@ import axios from 'axios'
 import { BASE_URL } from '@/configs/constants/urlConstant'
 
 export const apiClient = () => {
-    console.log(BASE_URL)
     const axiosHttp = axios.create({
         baseURL: BASE_URL,
     })

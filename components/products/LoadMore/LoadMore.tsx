@@ -13,17 +13,13 @@ const LoadMore = ({ handleLoadMore, loadMore }: Props) => {
     const { ref, inView } = useInView()
 
     useEffect(() => {
-        if (inView) {
-            handleLoadMore(inView)
+        if (inView && loadMore) {
+            setTimeout(() => handleLoadMore(inView), 1000)
         }
-    }, [inView])
+    }, [inView, loadMore])
 
     return (
-        <Container
-            maxWidth="lg"
-            ref={ref}
-            sx={{ display: 'flex', justifyContent: 'center', padding: '15px' }}
-        >
+        <Container maxWidth="lg" ref={ref}>
             {inView && loadMore ? <Loading /> : null}
         </Container>
     )

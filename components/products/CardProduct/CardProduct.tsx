@@ -12,12 +12,13 @@ type ProductsCardProps = {
 
 const CardProduct = ({ product }: ProductsCardProps) => {
     const { title, images, price, description } = product
+
     return (
         <Card sx={{ maxWidth: 345 }}>
             <CardMedia
                 sx={{ height: 150, objectFit: 'contain' }}
                 component="img"
-                image={images[0]}
+                image={images && images[0]}
                 title={title}
             />
             <CardContent sx={{ height: 150, overflowY: 'hidden' }}>
