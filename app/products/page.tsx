@@ -66,7 +66,7 @@ const ProductsPage = (props: ProductProps) => {
             !!products.length &&
             products.map((product) => {
                 return (
-                    <Grid item md={3} key={product.id}>
+                    <Grid item md={3} sm={4} xs={6} key={product.id}>
                         <CardProduct product={product} />
                     </Grid>
                 )
