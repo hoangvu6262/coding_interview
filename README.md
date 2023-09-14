@@ -1,34 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Coding Project (React with TypeScript): Infinite Scrolling and Searchable Product List
 
-## Getting Started
+For DEMO, use [Infinte Scroll and Searchable Products](https://stripe.com/docs/testing)
 
-First, run the development server:
+Requirements:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+**Using this [product api](https://dummyjson.com/docs/products) to implement the infinite scrolling list for display list of products.**
+
+1. Each time the user **scrolls to the end of the list, fetch the next 20 products**.
+2. **Display the list of products** with relevant information (e.g., name, price, image).
+    1. Keep the design as simple as possible. Please note that the **design will not be evaluated.**
+3. Implement an **input for searching product name** (using _/products/search?q_ ).
+   Whenever user typing, fetch data and update the product list.
+
+### Prerequisites
+
+\*\*Node version 16.xx or later
+
+### Cloning the repository
+
+```shell
+git clone https://github.com/hoangvu6262/coding_interview.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Install packages
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```shell
+npm i
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```
 
-## Learn More
+### Setup .env file
 
-To learn more about Next.js, take a look at the following resources:
+```js
+NEXT_PUBLIC_API_URL = https://dummyjson.com
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Start the app
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```shell
+npm run dev
+```
 
-## Deploy on Vercel
+## Available commands
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Running commands with npm `npm run [command]`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+| command | description                              |
+| :------ | :--------------------------------------- |
+| `dev`   | Starts a development instance of the app |
