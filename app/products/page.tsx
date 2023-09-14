@@ -49,8 +49,8 @@ const ProductsPage = (props: ProductProps) => {
         const newSkip = isReset ? 0 : skip
 
         const res = debouncedValue
-            ? await productActions.searchProducts(debouncedValue, newSkip)
-            : await productActions.getProducts(newSkip)
+            ? await productActions.searchProducts(debouncedValue, newSkip, true)
+            : await productActions.getProducts(newSkip, true)
         setProductData((prev: ProductDataType) => ({
             ...prev,
             total: res.total,
@@ -74,7 +74,7 @@ const ProductsPage = (props: ProductProps) => {
         )
     }
 
-    const handleLoadMoreProduct = async (inview: boolean) => {
+    const handleLoadMoreProduct = async () => {
         fetchProduct(false)
     }
 
@@ -86,7 +86,11 @@ const ProductsPage = (props: ProductProps) => {
     }
 
     return (
-        <Container maxWidth="lg" className="products-container">
+        <Container
+            maxWidth="lg"
+            className="products-container"
+            sx={{ marginTop: '50px' }}
+        >
             <Grid
                 container
                 direction="row"
